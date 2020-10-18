@@ -25,17 +25,11 @@ class MyApp extends App {
         <Head>
           <title>Lezada | React Next JS Multipurpose eCommerce Template</title>
           <link rel="icon" href={process.env.PUBLIC_URL + "/favicon.ico"} />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-            rel="stylesheet"
-          ></link>
+          <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"></link>
         </Head>
         <ToastProvider placement="bottom-left">
           <Provider store={reduxStore}>
-            <PersistGate
-              loading={<Component {...pageProps} />}
-              persistor={this.persistor}
-            >
+            <PersistGate loading={<Component {...pageProps} />} persistor={this.persistor}>
               <Component {...pageProps} />
             </PersistGate>
           </Provider>
